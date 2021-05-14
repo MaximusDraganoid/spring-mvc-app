@@ -9,12 +9,13 @@ public class MySpringMVCDispatcherServletInitializer extends AbstractAnnotationC
         return new Class[0];
     }
 
-    //здесь находится конфигурационный класс нашего спринг-приложения
+    //здесь находится конфигурационный класс нашего спринг-приложения, от которого будет создаваться application context
     @Override
     protected Class<?>[] getServletConfigClasses() {
         return new Class[] {SpringConfig.class};
     }
 
+    //указываем какие адреса будет обрабатывать наш Dispatcher
     @Override
     protected String[] getServletMappings() {
         return new String[] {"/"};
